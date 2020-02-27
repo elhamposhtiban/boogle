@@ -1,10 +1,9 @@
 import React from "react";
 import "./style.css";
 
-function SearchForm(props) {
+export function SearchForm(props) {
     return (
-      <form className="search form-searcch">
-        <div className="form-group">
+        <div className="form-group form-searcch">
           <label className ="search-label" htmlFor="book-search">Search For Any book You Want</label>
           <input
             value={props.search}
@@ -15,14 +14,17 @@ function SearchForm(props) {
             className="form-control"
             placeholder="Type in a book name to begin"
             id="book-search"
+            {...props}
           />
-          <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success search-btn">
-            Search
-          </button>
         </div>
-      </form>
+      
     );
   }
 
-
-export default SearchForm;
+export function FormBtn(props) {
+  return (
+    <button {...props}  className="btn btn-success search-btn">
+      {props.children}
+    </button>
+  );
+}
