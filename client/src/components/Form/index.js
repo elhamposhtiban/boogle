@@ -1,10 +1,11 @@
 import React from "react";
+import "./style.css";
 
 function SearchForm(props) {
     return (
       <form className="search form-searcch">
         <div className="form-group">
-          <label htmlFor="book-search">Search For Any book You Want</label>
+          <label className ="search-label" htmlFor="book-search">Search For Any book You Want</label>
           <input
             value={props.search}
             onChange={props.handleInputChange}
@@ -15,7 +16,7 @@ function SearchForm(props) {
             placeholder="Type in a book name to begin"
             id="book-search"
           />
-          <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
+          <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success search-btn">
             Search
           </button>
         </div>

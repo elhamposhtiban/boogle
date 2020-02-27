@@ -6,10 +6,12 @@ import Wrapper from "./components/Wrapper"
 
 function App() {
   return (
+    <React.Fragment>
+    <Navbar/>
    <Wrapper>
-<Navbar/>
-<Form/>
-</Wrapper>
+    <Form/>
+  </Wrapper>
+  </React.Fragment>
   );
 }
 

@@ -1,5 +1,8 @@
+*{
+    font-family: 'Playfair Display', ;
+}
 .navbar-style {
-    background-color: #c26565;
+    background-color: #053015;
     height:5rem;
 }
  .nav-item {
@@ -14,7 +17,7 @@
     letter-spacing: 0.5rem;
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.20);
     padding-top: 4px;
-    background-image: linear-gradient(to right bottom, #f3d19d, rgb(204, 83, 62));
+    background-image: linear-gradient(to right bottom, #33723b, rgb(204, 187, 32));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

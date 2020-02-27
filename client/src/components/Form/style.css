@@ -1,0 +1,27 @@
+
+*{
+    font-family: 'Playfair Display', ;
+}
+
+.form-searcch {
+margin: 30px 0 0 -435px;
+
+
+}
+
+.search-label {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    background-image: linear-gradient(to right bottom, #60ac7e, rgb(4, 58, 42));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+.search-btn {
+    margin-top: 20px;
+    width: 160px;
+    font-size: 20px;
+}
