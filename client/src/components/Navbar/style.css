@@ -1,0 +1,22 @@
+.navbar-style {
+    background-color: #c26565;
+    height:5rem;
+}
+ .nav-item {
+    padding-right: 7rem;
+    margin-left: 136px;
+}
+
+.second-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.20);
+    padding-top: 4px;
+    background-image: linear-gradient(to right bottom, #f3d19d, rgb(204, 83, 62));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
