@@ -1,4 +1,5 @@
 import React from "react";
+import SavedList from "../SavedList"
 import "./style.css"
 
 
@@ -14,10 +15,10 @@ const Navbar = (props)=> {
     <ul className="navbar-nav">
 
       <li className="nav-item">
-      <h1 className="lead second-title">  Saved books </h1>
+      <a href="/saved" className= "btn btn-success btn-style" > SAVED BOOKS</a>
       </li>
       <li className="nav-item">
-      <h1 className="lead second-title"> YOUR BEST SCORE : </h1>
+      <h1 className="lead second-title"> Welcome To Boogle Library </h1>
       </li>
       
     </ul>

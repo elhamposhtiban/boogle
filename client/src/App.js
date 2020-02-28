@@ -1,18 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Books  from "./pages/book"
 import Wrapper from "./components/Wrapper"
-// import Form from "./components/Form/index"
+import SavedList from "./components/SavedList"
 
 
 function App() {
   return (
-    <React.Fragment>
-    <Navbar/>
-   <Wrapper>
-     <Books/>
-  </Wrapper>
-  </React.Fragment>
+
+    <Router>
+      <div>
+        <Navbar />
+        <Wrapper>
+          <Route exact path="/" component={Books} />
+          <Route exact path="/book" component={Books} />
+          <Route exact path="/saved" component={SavedList} />
+        </Wrapper>
+      </div>
+    </Router>
+
   );
 }
 
