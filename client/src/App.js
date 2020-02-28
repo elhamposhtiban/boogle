@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from "./components/Navbar";
-
+import Books  from "./pages/book"
 import Wrapper from "./components/Wrapper"
+// import Form from "./components/Form/index"
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <React.Fragment>
     <Navbar/>
    <Wrapper>
+     <Books/>
   </Wrapper>
   </React.Fragment>
   );
