@@ -43,12 +43,8 @@ const Card = ({books}) => {
                         <h2>{book.volumeInfo.title}</h2>
                         <h4>{book.volumeInfo.authors ? book.volumeInfo.authors[0] : ''}</h4>
                         <p className="img-fluid float-left">{book.volumeInfo.description}</p>
-                            {/* { book.volumeInfo.imagesLinks &&
-                            (<img src= {book.volumeInfo.imageLinks.thumbnail}/>)} */}
-                        <img className="img-fluid float-left" 
-                        src= {book.volumeInfo.imagesLinks ?
-                            book.volumeInfo.imagesLinks.thumbnail : "no image"}/>
-
+                            { book.volumeInfo.imageLinks &&
+                            (<img  className="img-fluid float-left"src= {book.volumeInfo.imageLinks.thumbnail}/>)}
                         <a className="btn " href={book.volumeInfo.canonicalVolumeLink}> see more</a>
                         <button className="btn btn-success" data-unique-id={book.id} onClick= {saveToDB}>save</button>
                     </li>
