@@ -5,4 +5,10 @@ Boogle is an application that allows you to search for books based on title or a
 
 ## Deployment
 
-  link [https://protected-lake-10840.herokuapp.com/]
+ [link] (https://protected-lake-10840.herokuapp.com/)
+
+ ## Built With
+
+* React - The web framework used
+* Mongo DB - Managing the Data 
+* Express - Routing
