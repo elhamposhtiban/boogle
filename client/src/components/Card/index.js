@@ -17,7 +17,7 @@ const Card = ({books}) => {
                     "title": saveBook[0].volumeInfo.title,
                     "author":saveBook[0].volumeInfo.authors,
                     "description": saveBook[0].volumeInfo.description,
-                    // "image": saveBook[0].volumeInfo.imagesLinks.thumbnail,
+                    "image": saveBook[0].volumeInfo.imageLinks.thumbnail,
                     "link": saveBook[0].volumeInfo.canonicalVolumeLink
                 }
                 console.log (saveBookObj)
@@ -42,11 +42,11 @@ const Card = ({books}) => {
                     <li className="list-group-item" key={book.id}>
                         <h2>{book.volumeInfo.title}</h2>
                         <h4>{book.volumeInfo.authors ? book.volumeInfo.authors[0] : ''}</h4>
-                        <p className="img-fluid float-left">{book.volumeInfo.description}</p>
+                        <p className="img-fluid">{book.volumeInfo.description}</p>
                             { book.volumeInfo.imageLinks &&
                             (<img  className="img-fluid float-left"src= {book.volumeInfo.imageLinks.thumbnail}/>)}
-                        <a className="btn " href={book.volumeInfo.canonicalVolumeLink}> see more</a>
-                        <button className="btn btn-success" data-unique-id={book.id} onClick= {saveToDB}>save</button>
+                        <a className="btn btn-warning float-right ml-3" href={book.volumeInfo.canonicalVolumeLink}> see more</a>
+                        <button className="btn btn-success float-right" data-unique-id={book.id} onClick= {saveToDB}>save</button>
                     </li>
                     ))}
                 </ul>

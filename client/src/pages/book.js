@@ -46,19 +46,17 @@ const Books = () => {
 
 
       return (
-        <div>
+       
             <Container>
                 <Row>
-                    <Col size="ms-5 md-7">
+                    <Col size=" ms-12">
                         <Form
                         SearchInput = {SearchInput}
                         handleInputChange = {handleInputChange}
                         handleFormSubmit = {handleFormSubmit}
                         />
                     </Col>
-                    <Col size="ms-7 md-5"></Col>
-                </Row>
-                <Row>
+
                     <Col size="md-12">
                     {books.length ?<ResultList books={books} />: null}
                     </Col>
@@ -66,7 +64,7 @@ const Books = () => {
     
             </Container>
 
-        </div>
+      
 
 
       )
