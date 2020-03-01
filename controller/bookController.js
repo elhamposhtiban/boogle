@@ -3,18 +3,20 @@ const db = require("../models");
 // Defining methods for the booksController
 module.exports = {
   findAll: function(req, res) {
-    console.log("i ma readin re.query for you ",req.query)
+    console.log("i ma reading req.query for you ",req.query)
     db.Book
       .find(req.query)
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel =>{
+
+        console.log('dbmodel', dbModel)
+        return(res.json(dbModel))
+        })
       .catch(err => res.status(422).json(err));
       // .then(dbModel => res.json(dbModel => {
       //   console.log('dbmodel', dbModel)
       //   res.json(dbModel);
       // })
       // )
-      // .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
     db.Book
