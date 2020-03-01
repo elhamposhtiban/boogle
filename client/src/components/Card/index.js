@@ -15,7 +15,7 @@ const Card = ({books}) => {
         const saveBookObj =  
                 {
                     "title": saveBook[0].volumeInfo.title,
-                    "author":saveBook[0].volumeInfo.authors,
+                    "author":saveBook[0].volumeInfo.authors.join(''),
                     "description": saveBook[0].volumeInfo.description,
                     "image": saveBook[0].volumeInfo.imageLinks.thumbnail,
                     "link": saveBook[0].volumeInfo.canonicalVolumeLink
@@ -23,7 +23,7 @@ const Card = ({books}) => {
                 console.log (saveBookObj)
                 try {
                     await API.saveBook(saveBookObj);
-                    console.log(`this is a sabe book object ${saveBookObj}`)
+                    console.log(`this is a save book object ${saveBookObj}`)
                   } catch(error) {
                     console.group("yeaaa you did not saved the boooook!!!");
                     console.log(error);

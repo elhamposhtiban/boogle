@@ -18,6 +18,7 @@ function Saved() {
         try {
           const response = await API.getBooks();
           setSavedBooks(response.data);
+          console.log("this is what i can see in db", setSavedBooks(response.data))
           console.log("show me my booookk", savedBooks)
         } catch (error) {
           console.group("show meee save boookksss");
