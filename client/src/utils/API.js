@@ -3,6 +3,7 @@ import axios from "axios";
 export default {
 
     searchBook : (query) => {
+        console.log('query', query)
         const APIKEY ="AIzaSyBPkSAQ-3irVlA5KD_PCdKiqClED5kv1Ng"
        const BaseURL = "https://www.googleapis.com/books/v1/volumes?q=";
        return axios.get(BaseURL + query +"&key="+ APIKEY)
@@ -25,6 +26,7 @@ export default {
     
     // Saves a book to the database
     saveBook: (bookData) =>{
+        console.log('save book', bookData)
         return axios.post("/api/books", bookData);
     },
 

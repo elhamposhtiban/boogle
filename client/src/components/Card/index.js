@@ -24,14 +24,11 @@ const Card = ({books}) => {
                 try {
                     await API.saveBook(saveBookObj);
                   } catch(error) {
-                    console.group("yeaaa you saved the boooook!!!");
+                    console.group("yeaaa you did not saved the boooook!!!");
                     console.log(error);
                     console.groupEnd();
-                  }
-         
+                  } 
     }
-
-
     return (
 
         <div className="card p-3">
