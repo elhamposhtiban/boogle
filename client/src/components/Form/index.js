@@ -25,7 +25,10 @@ import "./style.css";
             placeholder="Type in a book name to begin"
             
           />
-          <button onClick={handleFormSubmit} className="btn btn-success search-btn">
+          <button 
+          onClick={handleFormSubmit}
+          disabled={!(SearchInput)}
+           className="btn btn-success search-btn">
             Search
           </button>
       </div>
