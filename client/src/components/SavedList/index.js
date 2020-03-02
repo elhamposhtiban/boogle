@@ -1,6 +1,6 @@
 import React from "react";
 import PropType from "prop-types"
-import API from "../../utils/API"
+
 
 const propType = {
 
@@ -21,7 +21,7 @@ const SavedResults = ( {savedBooks}, deleteHandler ) => {
 
           {savedBooks.legnth && savedBooks.map(savebook => (
           <li className="list-group-item mb-2" key={savebook._id}>
-        {console.log ("this is a second console log for boos ", savedBooks)}
+        {console.log ("this is a second console log for book ", savedBooks)}
           <button className="btn btn-danger " 
           onClick={deleteHandler}  
           data-uniqe-id={savebook._id}>

@@ -2,28 +2,27 @@ const db = require("../models");
 
 // Defining methods for the booksController
 module.exports = {
+
   findAll: function(req, res) {
-    console.log("i ma reading req.query for you ",req.query)
+
+    console.log("i am reading req.query for you ", req.query)
     db.Book
       .find(req.query)
-      .then(dbModel =>{
+      .then(dbModel => {
 
         console.log('dbmodel', dbModel)
         return(res.json(dbModel))
         })
       .catch(err => res.status(422).json(err));
-      // .then(dbModel => res.json(dbModel => {
-      //   console.log('dbmodel', dbModel)
-      //   res.json(dbModel);
-      // })
-      // )
   },
+
   findById: function(req, res) {
     db.Book
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
   create: function(req, res) {
     console.log("hey this is your req.body",req.body)
     db.Book
@@ -34,6 +33,7 @@ module.exports = {
         return (res.status(422).json(err))
       } );
   },
+  
   update: function(req, res) {
     db.Book
       .findOneAndUpdate({ _id: req.params.id }, req.body)

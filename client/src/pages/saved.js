@@ -16,16 +16,27 @@ function Saved() {
     //function for showing the saving books
       const showSavedBooks = async () => {
         try {
-          const response = await API.getBooks();
-          setSavedBooks(response.data);
-          console.log("this is what i can see in db", setSavedBooks(response.data))
+          const res = await API.getBooks();
+          setSavedBooks(res.data);
+          console.log("this is what i can see in db", setSavedBooks(res.data))
           console.log("show me my booookk", savedBooks)
+          console.log("show me my response", res)
         } catch (error) {
-          console.group("show meee save boookksss");
+          console.group("soory there is no saved books");
           console.log(error);
           console.groupEnd();
         }
       };
+
+      //  const showSavedBooks = () => {
+      //   API.getBooks()
+      // .then(res => {
+      //   console.log("hi this is the data i am reading",setSavedBooks(res.data));
+      //   console.log("show me my booookk", savedBooks)
+      //   return(setSavedBooks(res.data))} )
+      // .catch(err => console.log(err));
+      //  }
+
 
     //function for handling delete the book which we saved 
         const deleteHandler = event => {

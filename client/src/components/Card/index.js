@@ -23,7 +23,7 @@ const Card = ({books}) => {
                 console.log (saveBookObj)
                 try {
                     await API.saveBook(saveBookObj);
-                    console.log(`this is a save book object ${saveBookObj}`)
+                    console.log(`this is a save book object ${JSON.stringify(saveBookObj)}`)
                   } catch(error) {
                     console.group("yeaaa you did not saved the boooook!!!");
                     console.log(error);
