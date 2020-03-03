@@ -7,7 +7,7 @@ const propType = {
 books : PropType.array.isRequired
   }
 const ResultList = ({books}) => {
-  console.log(books[0])
+
 
   return(
     <Card  

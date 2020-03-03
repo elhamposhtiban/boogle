@@ -9,7 +9,7 @@ const propType = {
   deleteHandler: PropType.func.isRequired
     }
 
-const SavedResults = ( {savedBooks}, deleteHandler ) => {
+const SavedResults = ( {savedBooks, deleteHandler }) => {
 
       
     return(
@@ -19,21 +19,21 @@ const SavedResults = ( {savedBooks}, deleteHandler ) => {
 
         <ul className="list-group">
 
-          {savedBooks.legnth && savedBooks.map(savebook => (
-          <li className="list-group-item mb-2" key={savebook._id}>
+          {savedBooks.length>0 && savedBooks.map(item => (
+          <li className="list-group-item mb-2" key={item._id}>
         {console.log ("this is a second console log for book ", savedBooks)}
           <button className="btn btn-danger " 
           onClick={deleteHandler}  
-          data-uniqe-id={savebook._id}>
+          data-unique-id={item._id}>
                   Remove Book
           </button>
 
-          <h2>{savebook.title}</h2>
-          <h5>{savebook.author}</h5>
+          <h2>{item.title}</h2>
+          <h5>{item.author}</h5>
 
           <div className="mt-2">
-              <p className="img-fluid ">{savebook.description}</p>
-              <img className="img-fluid " src={savebook.image} />
+              <p className="img-fluid ">{item.description}</p>
+              <img className="img-fluid " src={item.image} />
           </div>
           </li>
           ))}

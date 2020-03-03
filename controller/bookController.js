@@ -28,10 +28,7 @@ module.exports = {
     db.Book
       .create(req.body)
       .then(dbModel => res.json(dbModel))
-      .catch(err =>  {
-        console.log('the error is ',err)
-        return (res.status(422).json(err))
-      } );
+      .catch(err => res.status(422).json(err));
   },
   
   update: function(req, res) {
@@ -41,6 +38,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
+
     db.Book
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())

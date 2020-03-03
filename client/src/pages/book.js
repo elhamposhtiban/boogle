@@ -42,8 +42,6 @@ const Books = () => {
             loadBooks(SearchInput);
           };
 
-          
-
 
       return (
        
@@ -63,9 +61,6 @@ const Books = () => {
                 </Row>
     
             </Container>
-
-      
-
 
       )
 

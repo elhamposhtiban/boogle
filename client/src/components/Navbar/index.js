@@ -1,10 +1,9 @@
 import React from "react";
-import SavedList from "../SavedList"
 import "./style.css"
 
 
 
-const Navbar = (props)=> {
+const Navbar = ()=> {
 
    return (
 <nav className="navbar navbar-expand-lg  navbar-style sticky-top">

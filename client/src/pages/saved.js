@@ -18,24 +18,14 @@ function Saved() {
         try {
           const res = await API.getBooks();
           setSavedBooks(res.data);
-          console.log("this is what i can see in db", setSavedBooks(res.data))
           console.log("show me my booookk", savedBooks)
-          console.log("show me my response", res)
         } catch (error) {
-          console.group("soory there is no saved books");
+          console.group("sorry there is no saved books");
           console.log(error);
           console.groupEnd();
         }
       };
 
-      //  const showSavedBooks = () => {
-      //   API.getBooks()
-      // .then(res => {
-      //   console.log("hi this is the data i am reading",setSavedBooks(res.data));
-      //   console.log("show me my booookk", savedBooks)
-      //   return(setSavedBooks(res.data))} )
-      // .catch(err => console.log(err));
-      //  }
 
 
     //function for handling delete the book which we saved 
@@ -51,7 +41,7 @@ function Saved() {
           await API.deleteBook(savedId);
           showSavedBooks();
         } catch(error) {
-          console.group("DELETE A BOOK");
+          console.group("DELETE A BOOK is not happening");
           console.log(error);
           console.groupEnd();
         }
@@ -63,7 +53,7 @@ function Saved() {
 
     <div>
     
-    {savedBooks.length ? 
+    {savedBooks.length>0 ? 
     <SavedList 
     savedBooks = {savedBooks}
     deleteHandler ={deleteHandler}
