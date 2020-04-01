@@ -9,8 +9,8 @@ Boogle is an application that allows you to search for books based on title or a
  
 
 ## Animated Gifs/Pictures of App
- 
-### demo :  ![Application](/client/src/assets/image/book.gif)
+
+![Application](/client/src/assets/image/book.gif)
 
 
  ## Built With
