@@ -6,6 +6,12 @@ Boogle is an application that allows you to search for books based on title or a
 ## Deployment   
 
  [Link](https://damp-cove-11110.herokuapp.com/)  
+ 
+
+## Animated Gifs/Pictures of App
+ 
+### demo :  ![Application](/client/src/assets/image/book.gif)
+
 
  ## Built With
 
